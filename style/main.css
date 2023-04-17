@@ -1,0 +1,274 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  background-image: url(/images/bg-mobile.png);
+  background-size: cover;
+}
+
+.fylo {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+}
+
+.fylo__file {
+  border: gray;
+  background: hsl(228, 56%, 26%);
+  width: 100%;
+  padding: 16px 0 16px 48px;
+  border-radius: 8px 48px 8px 8px;
+  font-family: "Raleway", sans-serif;
+}
+
+.fylo__file-upload {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.file {
+  border: none;
+  background-color: hsl(229, 57%, 11%);
+  width: 30px;
+  height: 30px;
+  padding: 24px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.file > input{
+  display: none;
+}
+
+.file img{
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+.fylo__storage {
+  gap: 16px;
+
+  border: gray;
+  background: hsl(228, 56%, 26%);
+  width: 100%;
+
+  padding: 32px 32px 80px 48px;
+  border-radius: 8px;
+  color: white;
+  font-family: "Raleway", sans-serif;
+  position: relative;
+}
+
+.fylo__storage-gbleft{
+  border: 2px solid black;
+  background-color: white;
+  border-radius: 8px;
+  padding: 32px 40px 32px 40px;
+  bottom: -24px;
+  left: 88px;
+  position: absolute;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.fylo__storage-gbleft p{
+  color: black;
+  font-size: 24px;
+  font-weight: 700;
+  
+}
+
+.fylo__storage-gbleft span{
+  font-size: 16px;
+
+}
+
+
+
+
+
+.fylo__storage-text {
+  width: 100%;
+  line-height: 32px;
+}
+
+.fylo__storage-text h2 {
+  text-align: center;
+  font-weight: 400;
+  color:rgb(173, 173, 173);
+
+}
+
+
+ .gray {
+  color: hsl(229, 7%, 55%);
+  font-weight: 700;
+  
+
+}
+
+.fylo__storage-text .bar {
+  width: 100%;
+  height: 16px;
+  border: 2px solid hsl(229, 57%, 11%);
+  background-color: hsl(229, 57%, 11%);
+  border-radius: 16px;
+ 
+}
+
+.fylo__storage-text .bar > .gradient {
+  height: 15px;
+  width: 70%;
+  background: rgb(255, 163, 153);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 163, 153, 1) 23%,
+    rgba(255, 77, 151, 1) 79%
+  );
+  border-radius: 16px;
+  position: relative;
+}
+
+.fylo__storage-text .gradient::after {
+  content: "";
+  border: none;
+  background-color: white;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  position: absolute;
+  right: 0;
+  
+}
+
+.gb {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgb(196, 196, 196);
+}
+
+/*Responsive*/
+
+@media screen and (min-width: 800px) {
+  body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(229, 57%, 11%);
+    background-image: none;
+  }
+
+  .fylo {
+    width: 70%;
+    display: flex;
+    flex-direction: unset;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .fylo__file {
+    border: gray;
+    background: hsl(228, 56%, 26%);
+    width: 50%;
+    padding: 72px 0 72px 48px;
+    border-radius: 8px 48px 8px 8px;
+    font-family: "Raleway", sans-serif;
+  }
+
+  .fylo__storage {
+    gap: 16px;
+    border: gray;
+    background: hsl(228, 56%, 26%);
+    width: 100%;
+   position: relative;
+    padding: 16px 0 80px 48px;
+    border-radius: 8px;
+    color: white;
+    font-family: "Raleway", sans-serif;
+  }
+
+  .fylo__storage-text {
+    width: 80%;
+    line-height: 40px;
+  }
+
+  .fylo__storage-text h2 {
+    text-align: left;
+  }
+
+  .fylo__storage-text .bar {
+    width: 100%;
+    height: 16px;
+    border-radius: 16px;
+    
+  }
+
+ 
+
+  .gb {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .fylo__storage-gbleft{
+    border: 2px solid black;
+    background-color: white;
+    border-radius: 8px;
+    position: absolute;
+    right: 0;
+    display: none;
+    
+
+  }
+  
+  
+  .fylo__storage-gbleft p{
+    color: black;
+    font-size: 24px;
+    font-weight: 700;
+    
+  }
+  
+  .fylo__storage-gbleft span{
+    font-size: 16px;
+  
+  }
+  
+  
+  
+}
+
+
+
